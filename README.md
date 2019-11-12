@@ -58,13 +58,13 @@ and
 wrk -c 8 -d 10 -t 4 https://localhost:5001/weatherforecast?cover
 ```
 
-In a 13 inch MacBook Pro of late 2014. We did that 10 times with 3 possible scenarios:
+We did that 10 times with 3 possible scenarios:
 
 1) **No Coverage**: This represent the original build without the `CoverageMiddleware`.
 2) **With Coverage Disabled**: This scenario contains the patched build with the `CoverageMiddleware` active but without opening a coverage session (not `query=cover`)
 3) **With Coverage Enabled**: This scenario has the patched build with the `CoverageMiddleware`active and an active session for the request with `query=cover`.
 
-#### The results are:
+#### The results in a 13 inch MacBook Pro of late 2014 are:
 
 |                            | Avg Req/Sec | Std. Dev. |   %    |  Delta  |
 |:--------------------------:|:-----------:|:---------:|:------:|:-------:|
