@@ -64,11 +64,31 @@ We did that 10 times with 3 possible scenarios:
 2) **With Coverage Disabled**: This scenario contains the patched build with the `CoverageMiddleware` active but without opening a coverage session (not `query=cover`)
 3) **With Coverage Enabled**: This scenario has the patched build with the `CoverageMiddleware`active and an active session for the request with `query=cover`.
 
-#### The results in a 13 inch MacBook Pro of late 2014 are:
+### The results in a 13 inch MacBook Pro of late 2014 are:
 
 |                            | Avg Req/Sec | Std. Dev. |   %    |  Delta  |
 |:--------------------------:|:-----------:|:---------:|:------:|:-------:|
 | **No Coverage**            | 21665.11    | 385.31    | 100%   | -       |
-| **With Coverage Disabled** | 20982.86    | 680.18    | 96,85% | -3,15%  |
-| **With Coverage Enabled**  | 16990.16    | 242.84    | 78,42% | -21,58% |
+| **With Coverage Disabled** | 20982.86    | 680.18    | 96.85% | -3.15%  |
+| **With Coverage Enabled**  | 16990.16    | 242.84    | 78.42% | -21.58% |
 
+
+### The results in a 15 inch MacBook Pro of 2018 are:
+
+|                            | Avg Req/Sec | Std. Dev. |   %    |  Delta  |
+|:--------------------------:|:-----------:|:---------:|:------:|:-------:|
+| **No Coverage**            | 48072.39    | 472.12    | 100%   | -       |
+| **With Coverage Disabled** | 47939.73    | 422.92    | 99.72% | -0.28%  |
+| **With Coverage Enabled**  | 41821.98    | 711.15    | 87.24% | -12.76% |
+
+Using the same machine but, running:
+
+```bash
+wrk -c 12 -d 10 -t 6 https://localhost:5001/weatherforecast
+```
+
+|                            | Avg Req/Sec | Std. Dev. |   %    |  Delta  |
+|:--------------------------:|:-----------:|:---------:|:------:|:-------:|
+| **No Coverage**            | 48459.94    | 388.34    | 100%   | -       |
+| **With Coverage Disabled** | 48456.47    | 376.71    | 99.99% | -0.01%  |
+| **With Coverage Enabled**  | 46529.14    | 447.39    | 96.02% | -3.98% |
