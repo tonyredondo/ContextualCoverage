@@ -91,4 +91,17 @@ wrk -c 12 -d 10 -t 6 https://localhost:5001/weatherforecast
 |:--------------------------:|:-----------:|:---------:|:------:|:-------:|
 | **No Coverage**            | 48459.94    | 388.34    | 100%   | -       |
 | **With Coverage Disabled** | 48456.47    | 376.71    | 99.99% | -0.01%  |
-| **With Coverage Enabled**  | 46529.14    | 447.39    | 96.02% | -3.98% |
+| **With Coverage Enabled**  | 46529.14    | 447.39    | 96.02% | -3.98%  |
+
+
+### The results in a Ryzen Threadripper 2950X 16-Core Processor (Windows 10 + WSL), running:
+
+```bash
+wrk -c 32 -d 10 -t 16 https://localhost:5001/weatherforecast
+```
+
+|                            | Avg Req/Sec | Std. Dev. |   %    |  Delta  |
+|:--------------------------:|:-----------:|:---------:|:------:|:-------:|
+| **No Coverage**            | 73888.35    | 1438.84   | 100%   | -       |
+| **With Coverage Disabled** | 73236.34    | 2258.05   | 99.12% | -0.88%  |
+| **With Coverage Enabled**  | 64465.51    | 1830.63   | 88.02% | -11.98% |
