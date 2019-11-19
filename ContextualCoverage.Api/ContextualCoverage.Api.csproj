@@ -13,6 +13,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ScopeAgent.Coverage" Version="0.1.15-beta.3" />
+    <PackageReference Include="ScopeAgent.Coverage" Version="0.1.15" />
   </ItemGroup>
 </Project>
