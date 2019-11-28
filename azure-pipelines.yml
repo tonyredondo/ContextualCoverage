@@ -24,3 +24,10 @@ steps:
     command: 'dotnet test'
     useSolutions: true
     dsn: '$(SCOPE_DSN)'
+
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'current'
+    downloadType: 'specific'
+    itemPattern: '/var/log/scope/**'
+    downloadPath: '$(System.ArtifactsDirectory)'
