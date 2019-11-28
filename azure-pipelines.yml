@@ -18,7 +18,7 @@ steps:
 
 - task: scope-for-dotnet@0
   inputs:
-    command: 'dotnet test'
+    command: 'dotnet test --debug'
     useSolutions: true
     dsn: '$(SCOPE_DSN)'
 
