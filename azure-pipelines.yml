@@ -12,15 +12,10 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
-steps:
-- checkout: self
-  clean: true
-  
+steps: 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: scope-for-dotnet@0
   inputs:
-    command: 'dotnet test --debug'
-    useSolutions: true
     dsn: '$(SCOPE_DSN)'
