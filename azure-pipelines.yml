@@ -15,3 +15,9 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: scope-for-dotnet@0
+  inputs:
+    command: 'dotnet test'
+    useSolutions: true
+    dsn: '123'
