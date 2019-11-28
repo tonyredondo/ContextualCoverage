@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 variables:
   buildConfiguration: 'Release'
@@ -17,5 +17,6 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: scope-for-dotnet@0
+  displayName: Scope for .NET
   inputs:
     dsn: '$(SCOPE_DSN)'
