@@ -23,4 +23,4 @@ steps:
   inputs:
     command: 'dotnet test'
     useSolutions: true
-    dsn: '123'
+    dsn: '$(SCOPE_DSN)'
