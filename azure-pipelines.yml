@@ -14,8 +14,6 @@ pool:
 steps: 
 - script: dotnet build
   displayName: 'dotnet build'
-
-- task: scope-for-dotnet@0
-  displayName: Scope for .NET
+- task: scope-for-dotnet@1
   inputs:
     dsn: '$(SCOPE_DSN)'
