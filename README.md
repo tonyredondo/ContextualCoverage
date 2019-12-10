@@ -1,6 +1,6 @@
 # Contextual Coverage Example (.NET)
 
-The requirements to run this example is to have installed [`.NET Core 3.0`](https://dotnet.microsoft.com/download) sdk.
+The requirements to run this example is to have installed [`.NET Core 3.1`](https://dotnet.microsoft.com/download) sdk.
 
 ## Run Unit Tests with Contextual Coverage
 

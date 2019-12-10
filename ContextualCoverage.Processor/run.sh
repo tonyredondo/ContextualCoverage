@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+#!/bin/sh
 
 cd ..
 dotnet run -p ./ContextualCoverage.Processor/ContextualCoverage.Processor.csproj -- --apply
