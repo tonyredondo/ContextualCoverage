@@ -1,0 +1,2 @@
+#syntax=tonyredondo/dotnetfile
+command: dotnet build
