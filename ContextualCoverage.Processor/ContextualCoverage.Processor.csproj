@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ScopeAgent.Coverage" Version="0.1.19" />
+    <PackageReference Include="ScopeAgent.Coverage" Version="0.1.22-beta.1" />
   </ItemGroup>
 </Project>
