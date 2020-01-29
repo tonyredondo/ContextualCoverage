@@ -13,7 +13,8 @@ namespace ContextualCoverage.Api.Controllers
     {
         public async Task<double> Index()
         {
-            var currentTemp = await CachedWeatherService.GetCurrentTempAsync().ConfigureAwait(false);
+            var currentTemp = await CachedWeatherService.
+                GetCurrentTempAsync().ConfigureAwait(false);
             return Util.ToFahrenheit(currentTemp);
         }
     }
