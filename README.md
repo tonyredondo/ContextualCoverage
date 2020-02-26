@@ -1,5 +1,7 @@
 # Contextual Coverage Example (.NET)
 
+This is the code from the article: https://medium.com/scopedev/context-based-code-coverage-now-with-more-net-d99cb48971bb
+
 The requirements to run this example is to have installed [`.NET Core 3.1`](https://dotnet.microsoft.com/download) sdk.
 
 ## Run Unit Tests with Contextual Coverage
